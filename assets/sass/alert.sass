@@ -1,0 +1,50 @@
+.app-alerts-container
+  position: fixed
+  z-index: 99999
+  right: 25px
+  width: 500px
+  top: 120px
+  .app-alerts, .app-errors
+    width: 100%
+    height: auto
+    display: flex
+    background: white
+    box-shadow: 10px 10px 28px 1px rgba(0,0,0,0.75)
+    margin-top: 10px
+    .icon
+      height: auto
+      width: 120px
+      color: white
+      padding-top: 12.5px
+      padding-bottom: 12.5px
+      text-align: center
+      font-size: 70px
+      background: #29D885
+    .message
+      padding: 14px
+      width: calc(100% - 150px)
+      position: relative
+      .title
+        font-weight: bold
+        font-size: 20px
+      p
+        font-size: 17px
+        margin-top: 10px
+      .closeMessage
+        width: 20px
+        height: 20px
+        position: absolute
+        top: 10px
+        right: 10px
+        font-size: 20px
+  .app-errors
+    .icon
+      background: #E44B5E
+.error
+  width: 100%
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  text-align: center

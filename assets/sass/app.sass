@@ -1,0 +1,149 @@
+*
+  margin: 0
+  padding: 0
+  font-family: 'Gilroy', sans-serif
+  scroll-behavior: smooth
+body
+  background: #f3f3f3
+.main
+  display: flex
+  flex-wrap: wrap
+.container
+  width: calc(100% - 300px)
+  height: 100vh
+  overflow: auto
+  .router-container
+    padding: 50px
+    margin-top: 80px
+.container.active
+  width: calc(100% - 75px)
+
+.form-container
+  margin-top: 25px
+  background: #f7f7f7
+  padding: 25px
+  border-radius: 5px
+  .series-container
+    margin-top: 25px
+    .series
+      width: 500px
+      display: flex
+      .form-label, .form-input
+        margin-right: 7.5px
+        margin-left: 7.5px
+        text-align: center
+        margin-top: 7.5px !important
+        padding-left: 10px
+        padding-right: 10px
+        width: calc(50% - 45px)
+      .delete, .add
+        width: 45px
+        height: 45px
+        margin-top: 7.5px
+        line-height: 35px
+        background: #29D885
+        color: white
+        font-size: 17px
+        outline: none
+        border: none
+        text-align: center
+        border-radius: 10px
+        transition: .3s linear background-color
+      .delete
+        background: #96040D
+      .add:hover
+        background: #1fb76f
+      .delete:hover
+        background: #79030a
+  .th3-element
+    width: 100%
+    display: flex
+    .element
+      width: calc(33% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+  .th2-element
+    width: 100%
+    display: flex
+    .element
+      width: calc(50% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+  .th4-element
+    width: 100%
+    display: flex
+    .element
+      width: calc(25% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+  .th5-element
+    width: 100%
+    display: flex
+    .element
+      width: calc(20% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+  .th-element
+    width: 100%
+    display: flex
+    .element
+      margin-left: 20px
+      margin-right: 20px
+    .element:first-child
+      margin-left: 0
+    .element:last-child
+      margin-right: 0
+  .form-label:first-child
+    margin-top: 0 !important
+  .form-label
+    font-size: 17px
+    color: #b8bcbf
+    margin-top: 10px
+    display: block
+  .form-select, .form-select-th2
+    display: block
+    min-width: calc(250px)
+    height: 45px
+    padding-left: 15px
+    padding-right: 15px
+    border: 1px solid #36323D
+    border-radius: 10px
+    color: #36323D
+    font-size: 20px
+    margin-top: 5px
+  .form-select-th2
+    min-width: 500px
+
+  .form-input, .form-input-th2
+    display: block
+    width: calc(100% - 32px)
+    height: 45px
+    padding-left: 15px
+    padding-right: 15px
+    border: 1px solid #36323D
+    border-radius: 10px
+    color: #36323D
+    font-size: 20px
+    margin-top: 5px
+  .form-input-th2
+    width: calc(500px - 32px)
+
+  .form-button
+    display: block
+    margin-top: 25px
+    padding-right: 25px
+    padding-left: 25px
+    min-width: 150px
+    height: 45px
+    line-height: 45px
+    background: #5ea1f0
+    color: white
+    font-size: 20px
+    outline: none
+    border: none
+    text-align: center
+    border-radius: 10px
+    transition: .3s linear background-color
+    &:hover
+      background: #3f70ab
+@import "alert"
