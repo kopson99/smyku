@@ -97,6 +97,7 @@ export default {
     async userLogin() {
       try {
         let response = await this.$auth.loginWith('local', {data: this.login});
+        console.log(response)
       } catch (err) {
         console.log(err.response.data.message)
         await this.$store.dispatch('store/addError', err.response.data.message)

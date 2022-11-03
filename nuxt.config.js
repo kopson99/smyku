@@ -81,12 +81,12 @@ export default {
   },
   proxy: {
     '/api': {
-      target: 'http://localhost:8081',
+      target: 'http://localhost:8080',
       ws: true,
       changeOrigin: true
     },
     '/auth': {
-      target: 'http://localhost:8081',
+      target: 'http://localhost:8080',
       ws: true,
       changeOrigin: true
     }
@@ -96,14 +96,13 @@ export default {
   auth: {
     redirect: {
       login: '/login',
-      logout: '/',
+      logout: '/login',
       callback: '/login',
-      home: '/dashboard/'
+      home: '/'
     },
     scopeKey: 'roles',
     strategies: {
       local: {
-        scheme: 'refresh',
         token: {
           property: 'access_token',
           required: true,
@@ -111,21 +110,15 @@ export default {
           global: false,
           type: 'Bearer'
         },
-        refreshToken: {
-          property: 'refresh_token',
-          data: 'refreshToken',
-          maxAge: 60 * 60 * 24 * 30
-        },
         user: {
           property: 'user',
-          // autoFetch: true
+          autoFetch: true
         },
         endpoints: {
           login: { url: '/auth/login', method: 'post' },
           register: { url: '/auth/register', method: 'post' },
           logout: { url: '/auth/logout', method: 'post' },
-          user: { url: '/auth/user', method: 'get' },
-          refresh: { url: '/auth/refresh', method: 'post' }
+          user: { url: '/auth/user', method: 'get' }
         }
       }
     }
